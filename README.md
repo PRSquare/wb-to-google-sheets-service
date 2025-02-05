@@ -13,14 +13,22 @@ Create `.env` file in project directory. There is `.env.default` file which prov
 **Environment variables:**
 
 `POSTGRES_HOST` - A postgres host. Also used to configure postgres container.
+
 `POSTGRES_PORT` - A postgres port. Also used to configure postgres container.
+
 `POSTGRES_USER` - A postgres user. Also used to configure postgres container.
+
 `POSTGRES_DB` - A database name.Also used to configure postgres container.
+
 `POSTGRES_PASSWORD` - A postgres user password. Also used to configure postgres container.
+
 `GOOGLE_APPLICATION_CREDENTIALS` - a path to google sheet keys (see [Set up Google Sheets](#set-up-google-sheets))
 `WB_API_KEY` - An wildberies api key
+
 `GOOGLE_SHEETS_SERVICE_TIMEOUT_MINUTES` - Timeout in minutes for service that uploads data to google sheets to run.
+
 `GOOGLE_SHEETS_SHEET_NAME` - A name of sheet to upload data to.
+
 `WB_SERVICE_TIMEOUT_MINUTES` - Timeout in minutes for service that gets data from wildberies to run.
 
 ### Set up Google Sheets
@@ -56,6 +64,5 @@ specify path to this json file in `.env` file.
 ### Run docker-compose
 
 ```sh
-docker-compose build
-docker-compose up
+docker-compose build && docker-compose up
 ```

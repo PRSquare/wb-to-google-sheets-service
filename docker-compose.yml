@@ -1,0 +1,20 @@
+services:
+  app:
+    container_name: wb_service
+    build: .
+    depends_on:
+      - db
+
+  db:
+    container_name: db
+    image: postgres:17
+    ports:
+      - 5432:5432
+    restart: always
+    env_file: ".env"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./schema:/docker-entrypoint-initdb.d
+
+volumes:
+  db_data:
